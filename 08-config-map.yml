@@ -1,0 +1,8 @@
+kind: Pod
+apiVersion: v1
+metadata:
+ name: daws78s
+data:
+  course: "Devops with AWS"
+  trainer: "Khyathi"
+  github: "https://github.com/Khyathi304/k8-eksctl"
