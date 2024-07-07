@@ -6,21 +6,21 @@ metadata:
     app: nginx
     purpose: Deployment
     tier: web
-  spec:
-    replicas: 3
-    selector:
-      match labels:
+spec:
+  replicas: 3
+  selector:
+    match labels:
+      app: nginx
+      tier: web
+      project: test-project
+  template:
+    metadata:
+      labels:
         app: nginx
         tier: web
         project: test-project
-    template:
-      metadata:
-        labels:
-          app: nginx
-          tier: web
-          project: test-project
-          extra-key: extra-value
-      spec:
-        containers:
-        - name: nginx
-          image: nginx
+        extra-key: extra-value
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
